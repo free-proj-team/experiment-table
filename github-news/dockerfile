@@ -1,0 +1,8 @@
+FROM python:3.9
+
+COPY . /opt/backend/
+RUN pip3 install -r /opt/backend/requirements.txt
+
+WORKDIR /opt
+
+CMD python3 /opt/backend/main.py

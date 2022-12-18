@@ -1,8 +1,9 @@
 from fastapi import APIRouter, status, Body, Header
 from requests import post
+import os
 
 router = APIRouter(prefix="/api")
-DISCORD_HOOK_URL = "https://discord.com/api/webhooks/1053971440677965885/mBIPnG_RmOFSQkANi1mK_p9NtmABvJ1Mp9rr9ze_N1jRrJJNapGgfOivWs5nm4U2guWV"
+DISCORD_HOOK_URL = os.environ.get("DISCORD_HOOK_URL")
 
 @router.post("/send", status_code=status.HTTP_204_NO_CONTENT, response_model=None)
 def send(raw_payload: dict = Body(), event: str = Header(default=..., alias="X-GitHub-Event")):
