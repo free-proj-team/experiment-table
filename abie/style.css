@@ -1,0 +1,146 @@
+html {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 16px;
+    font-family: 'LINESeedKR-Bd';
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-size: 1.5rem
+}
+
+video {
+    height: 100%;
+}
+
+#vid-container {
+    z-index: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+}
+
+#dark-layer {
+    z-index: 1;
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: 40%;
+}
+
+#year-praise-container {
+    z-index: 2;
+    position: fixed;
+    left: 0;
+    width: fit-content;
+    height: fit-content;
+    text-align: left;
+    margin: 25px;
+}
+
+#coramdeo-praise-container {
+    z-index: 2;
+    position: fixed;
+    right: 0;
+    width: fit-content;
+    height: fit-content;
+    text-align: right;
+    margin: 25px;
+}
+
+#center-layer {
+    z-index: 2;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#center-praise-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#center-praise-1 {
+    width: 75%;
+    height: fit-content;
+    text-align: left;
+    font-size: 3rem;
+}
+
+#center-praise-2 {
+    width: 75%;
+    height: fit-content;
+    text-align: left;
+    font-size: 3rem;
+}
+
+#links {
+    z-index: 2;
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    width: fit-content;
+    height: fit-content;
+    text-align: left;
+    margin: 25px;
+}
+
+.link-icon img {
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    margin-right: 5px;
+}
+
+.link-icon :hover {
+    cursor: pointer;
+}
+
+#credit {
+    z-index: 2;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: fit-content;
+    height: fit-content;
+    text-align: right;
+    margin: 25px;
+}
+
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@media screen and (max-width:800px) {
+    html { font-size: 13px }
+    .link-icon img { width: 60px; height: 60px;}
+}
+
+@media screen and (max-width:640px) {
+    html { font-size: 10px }
+    .link-icon img { width: 40px; height: 40px;}
+    #credit { width: 40%;}
+}
